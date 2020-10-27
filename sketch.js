@@ -15,14 +15,7 @@ function setup() {
 
 function draw() {
   background(0,0,0);  
-
-collide(car,wall);
-
-  drawSprites();
-}
-function collide()
-
-{ if (car.x - wall.x < wall.width/2 + car.width/2){
+if (car.x - wall.x < wall.width/2 + car.width/2){
      car.velocityX=0;
 
     var deformation=0.5*weight*speed*speed/22500;
@@ -36,5 +29,8 @@ function collide()
       car.shapeColor=color(0,255,0);
 
     }  
-  }
+  
    }
+
+  drawSprites();
+}
